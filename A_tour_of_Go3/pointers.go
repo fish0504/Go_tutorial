@@ -1,7 +1,24 @@
-package main
+package main 
 
 import "fmt"
 
+
+// var p *int
+
+//i:=42
+//p=&i
+
+//fmt.Println(*p)
+//*p=21
+
+
 func main(){
-	i,j:=42,2701
+	i:=42
+
+	p:=&i
+	
+	fmt.Println(*p)
+	*p=21
+	fmt.Println(i)
+	fmt.Println(2701/37)
 }
