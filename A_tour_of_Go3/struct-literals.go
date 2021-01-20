@@ -1,17 +1,26 @@
 package main
 import "fmt"
 
-type Vertex struct{
-	X,Y int
-}
+func main() {
+	q:=[]int{2,3,5,8,11,19}
+	fmt.Println(q)
 
-var (
-	v1=Vertex{1,2}
-	v2=Vertex{X: 3}//指定していないYは0
-	v3=Vertex{}//何も初期値を指定しなければ{0,0}となる
-	p=&Vertex{1,2}
-)
+	r:=[]bool{
+		true,false,true,true,false,true}
 
-func main(){
-	fmt.Println(v1,p,v2,v3)
+		fmt.Println(r)
+
+		s := []struct {
+			i int
+			b bool
+		}{
+			{2, true},
+			{3, false},
+			{5, true},
+			{7, true},
+			{11, false},
+			{13, true},
+		}
+		fmt.Println(s)
+
 }
