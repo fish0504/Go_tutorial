@@ -23,3 +23,4 @@ https://www.amazon.co.jp/Go%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B
 ## 参考資料
 * Go言語の初心者が見ると幸せになれる場所  https://qiita.com/tenntenn/items/0e33a4959250d1a55045
 * 公式ドキュメント　https://golang.org/
+* 日本語で説明があるが古いので注意<br>http://golang.jp/go_spec#Making_slices_maps_and_channels
