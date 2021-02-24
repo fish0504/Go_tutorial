@@ -9,10 +9,10 @@ https://sagantaf.hatenablog.com/entry/2020/02/08/221720
 
 
 
-#### 2.A Tour of Go (基本文法)　<--今ここ
+#### 2.A Tour of Go (基本文法)　
 https://go-tour-jp.appspot.com/welcome/1
 
-#### 3.Go Web プログラミング
+#### 3.Go Web プログラミング　<--今ここ
 https://astaxie.gitbooks.io/build-web-application-with-golang/content/ja/index.html
 
 #### 4.Goプログラミング実践入門　標準ライブラリでゼロからWebアプリを作る
