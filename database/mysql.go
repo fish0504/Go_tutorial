@@ -9,14 +9,20 @@ import (
 )
 
 func main(){
-	db,err:=sql.Open("mysql","astaxie:@/test?charset=utf8")
+	//登録済みのデータベースドライバを開く
+	db,err:=sql.Open("mysql","root:@/test?charset=utf8")
 	checkErr(err)
+	//以下のsyntaxがサポートされている
+	//user@unix(/path/to/socket)/dbname?charset=utf8
+	//user:password@tcp(localhost:5555)/dbname?charset=utf8
+	//user:password@/dbname
+	//user:password@tcp([de:ad:be:ef::ca:fe]:80)/dbname
 
 	//データの挿入
-	stmt,err:=db.Prepare("INDERT userinfo SET username=?,departname=?,created=?")
+	stmt,err:=db.Prepare("INSERT userinfo SET username=?,departname=?,created=?")
 	checkErr(err)
 
-	res,err:=stmt.Exec("asta","research","2021-03-08")
+	res,err:=stmt.Exec("Debit","research","2021-03-08")
 	checkErr(err)
 
 	id,err:=res.LastInsertId()
