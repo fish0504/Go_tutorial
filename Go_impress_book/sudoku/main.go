@@ -8,7 +8,23 @@ type Board struct{
 	nums [][] int
 	size int
 }
-
+func(b *Board) getExamBorad(){
+	b = &Board{
+		nums: [][]int{
+				{0, 0, 0, 0, 0, 0, 0, 0, 0},
+				{0, 0, 0, 0, 0, 0, 0, 0, 0},
+				{0, 0, 0, 0, 0, 0, 0, 0, 0},
+				{0, 0, 1, 0, 3, 0, 0, 0, 0},
+				{0, 0, 0, 2, 0, 0, 0, 0, 0},
+				{0, 0, 0, 0, 0, 0, 0, 0, 0},
+				{0, 0, 0, 0, 0, 0, 0, 0, 0},
+				{0, 0, 0, 0, 0, 0, 0, 0, 0},
+				{0, 0, 0, 0, 0, 0, 0, 0, 0},
+		},
+		size: 9,
+	}
+	
+}
 func outBar(len int)(){
 	for i:=0;i<len+2;i++{
 		fmt.Printf("--")
@@ -42,8 +58,16 @@ func (b *Board)	get(x,y int)int{
 	return b.nums[y][x]
 }
 func (b *Board)	put(x,y,value int)bool{
+	x--
+	y--
+	//すでに埋まっていたらだめ
+	if b.get(x,y)!=0 {
+		return false;
+	}else {
+		b.nums[y][x]=value
+		return true
+	}
 
-	return true
 }
 
 func main(){
